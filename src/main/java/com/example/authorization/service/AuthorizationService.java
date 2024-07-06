@@ -47,7 +47,7 @@ public class AuthorizationService {
         String jsonString = jsonNode.toString();
         logger.info("JSON enviado a Apigateway2: {}", jsonString);
 
-        String gateway2Url = "http://localhost:8083/api/gateway2/receive";
+        String gateway2Url = "https://apigateway2.onrender.com/api/gateway2/receive";
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -95,7 +95,7 @@ public class AuthorizationService {
     
         byte[] isoBytes = isoMessage.toString().getBytes();
     
-        String gateway1Url = "http://localhost:8081/api/gateway/receiveIso";
+        String gateway1Url = "https://apigateway1.onrender.com/api/gateway/receiveIso";
     
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
